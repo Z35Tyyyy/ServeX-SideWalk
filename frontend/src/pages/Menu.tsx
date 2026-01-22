@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ShoppingCart, Plus, Minus, Loader2, Search, Flame, Leaf, X, Smile } from 'lucide-react';
+import { ShoppingCart, Plus, Minus, Loader2, Search, X, Smile } from 'lucide-react';
 import { getMenu, getMenuCategories } from '../lib/api';
 import { useCartStore } from '../store/cartStore';
 import { formatPrice } from '../lib/utils';
