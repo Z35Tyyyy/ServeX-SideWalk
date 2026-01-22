@@ -11,10 +11,10 @@ import Footer from '../../components/Footer';
 interface Order { _id: string; tableId: { tableNumber: number }; items: { name: string; quantity: number; specialInstructions?: string }[]; status: 'PAID' | 'PREPARING' | 'READY' | 'SERVED'; createdAt: string; }
 
 const statusConfig = {
-    PAID: { label: 'New', bg: 'rgba(139, 92, 246, 0.15)', border: 'var(--color-primary)', color: 'var(--color-primary-light)', nextLabel: 'Start Preparing', gradient: 'var(--gradient-primary)' },
-    PREPARING: { label: 'Preparing', bg: 'rgba(234, 179, 8, 0.15)', border: 'var(--color-warning)', color: 'var(--color-warning)', nextLabel: 'Mark Ready', gradient: 'var(--gradient-secondary)' },
-    READY: { label: 'Ready', bg: 'rgba(34, 197, 94, 0.15)', border: 'var(--color-success)', color: 'var(--color-success)', nextLabel: 'Mark Served', gradient: 'var(--gradient-success)' },
-    SERVED: { label: 'Served', bg: 'rgba(34, 197, 94, 0.15)', border: 'var(--color-success)', color: 'var(--color-success)', nextLabel: '', gradient: 'var(--gradient-success)' },
+    PAID: { label: 'New', bg: 'rgba(139, 92, 246, 0.15)', border: 'var(--color-primary)', color: 'var(--color-primary-light)', nextLabel: 'Start Preparing', gradient: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)' },
+    PREPARING: { label: 'Preparing', bg: 'rgba(234, 179, 8, 0.15)', border: 'var(--color-warning)', color: '#B45309', nextLabel: 'Mark Ready', gradient: 'linear-gradient(135deg, #F59E0B 0%, #B45309 100%)' },
+    READY: { label: 'Ready', bg: 'rgba(34, 197, 94, 0.15)', border: 'var(--color-success)', color: '#15803D', nextLabel: 'Mark Served', gradient: 'linear-gradient(135deg, #22C55E 0%, #15803D 100%)' },
+    SERVED: { label: 'Served', bg: 'rgba(34, 197, 94, 0.15)', border: 'var(--color-success)', color: '#15803D', nextLabel: '', gradient: 'var(--gradient-success)' },
 };
 
 export default function KitchenDashboard() {
