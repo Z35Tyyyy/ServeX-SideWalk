@@ -66,7 +66,7 @@ export default function KitchenDashboard() {
                         { status: 'PAID', label: 'New', icon: Flame },
                         { status: 'PREPARING', label: 'Cooking', icon: ChefHat },
                         { status: 'READY', label: 'Ready', icon: Bell },
-                    ].map(({ status, label, icon: Icon }) => (
+                    ].map(({ status, label }) => (
                         <div key={status} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, padding: '8px 4px', background: 'rgba(255,255,255,0.5)', borderRadius: 8, border: '1px solid var(--color-border-light)' }}>
                             <span style={{ fontSize: 20, fontWeight: 800, color: statusConfig[status as keyof typeof statusConfig].color, lineHeight: 1 }}>{orders.filter((o) => o.status === status).length}</span>
                             <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--color-text-secondary)', textTransform: 'uppercase', letterSpacing: 0.5 }}>{label}</span>
