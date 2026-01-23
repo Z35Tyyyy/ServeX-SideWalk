@@ -26,7 +26,7 @@ export default function Payment() {
         try {
             const { data } = await createPayment(orderId);
             const options = {
-                key: data.keyId, amount: data.amount, currency: data.currency, name: 'Coffee Dude', order_id: data.razorpayOrderId,
+                key: data.keyId, amount: data.amount, currency: data.currency, name: 'Sidewalk', order_id: data.razorpayOrderId,
                 handler: async (res: any) => {
                     try { await verifyPayment({ orderId, razorpayOrderId: res.razorpay_order_id, razorpayPaymentId: res.razorpay_payment_id, razorpaySignature: res.razorpay_signature }); setState('success'); clearCart(); setTimeout(() => navigate(`/order/${orderId}`), 2000); }
                     catch { setError('Verification failed'); setState('failed'); }
